@@ -195,12 +195,26 @@ puntos_amarillos = np.array([ [0.0, 1.0],
                    [300.0, 1.0],
                    [350.0, 1.0]])
 
+puntos_amarillos_reducido = np.array([ [0.0, 1.0], 
+                                        [50.0, 0.3], 
+                                        [90.0, 0.6],  
+                                        [250.0, 1.0],])
+
+puntos_neutro = np.array([ [0.0, 1.0], 
+                            [50.0, 1.0], 
+                            [90.0, 1.0],  
+                            [250.0, 1.0],])
+
+
+''' P1_IMG_2402.tif '''
+''' PruebaTonos.jfif '''
 
 
 
-imagen = cv2.imread("Imagenes/ArchivosT1/Bosque.jpeg")
+
+imagen = cv2.imread("Imagenes/ArchivosT1/PruebaTonos.jfif ")
 imagenRGB = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
-imagen_saturada = ColorSaturation(imagenRGB, puntos_azules, "LCH")
+imagen_saturada = ColorSaturation(imagenRGB, puntos_azules, "HSI")
 plt.imshow(imagen_saturada)
 plt.show()
 

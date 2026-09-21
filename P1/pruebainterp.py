@@ -71,4 +71,9 @@ puntos_amarillos = np.array([ [0.0, 1.0],
                    [300.0, 1.0],
                    [350.0, 1.0]])
 
-graficar_puntos_control(puntos_azules)
+puntos_amarillos_reducido = np.array([ [0.0, 1.0], 
+                                        [50.0, 0.3], 
+                                        [90.0, 0.6],  
+                                        [250.0, 1.0],])
+
+graficar_puntos_control(puntos_amarillos_reducido)

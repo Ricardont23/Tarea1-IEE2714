@@ -3,7 +3,7 @@ Repositorio de códigos e imágenes (y demás) usados para el desarrollo de la t
 
 ## Pregunta 1
 
-En el archivo $\verb*|P1SaturaciónTono.py|$ se encuentra el código listo para ejecutarse con las 3 configuraciones usadas en el informe ya definidas. 
+En el archivo P1SaturaciónTono.py se encuentra el código listo para ejecutarse con las 3 configuraciones usadas en el informe ya definidas. 
 
 ```ruby
 puntos_azules = np.array([[0.0, 0.7], 
@@ -48,6 +48,16 @@ puntos_amarillos = np.array([ [0.0, 1.0],
                    [300.0, 1.0],
                    [350.0, 1.0]])
 
+puntos_amarillos_reducido = np.array([ [0.0, 1.0], 
+                                        [50.0, 0.3], 
+                                        [90.0, 0.6],  
+                                        [250.0, 1.0],])
+
+puntos_neutro = np.array([ [0.0, 1.0], 
+                            [50.0, 1.0], 
+                            [90.0, 1.0],  
+                            [250.0, 1.0],])
+
 imagen = cv2.imread(" Path a la imagen deseada ")
 imagenRGB = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
 imagen_saturada = ColorSaturation(imagenRGB, '''configuracion deseada''' , '''HSI"/"LCH''')
@@ -65,7 +75,7 @@ Dentro del repositorio se encuentran la carpeta de imagenes que se usaron para e
 
 ### Graficos de Configuraciones $m(h)$
 
-Para obtener los graficos de las curvas $m(h)$ se usa el archivo $\verb*|pruebainterp.py|$ donde tambien están definidas las configuraciones usadas. 
+Para obtener los graficos de las curvas $m(h)$ se usa el archivo pruebainterp.py donde tambien están definidas las configuraciones usadas. 
 
 ```ruby 
 puntos_azules = np.array([[0.0, 0.7], 
@@ -111,6 +121,11 @@ puntos_amarillos = np.array([ [0.0, 1.0],
                    [250.0, 1.0], 
                    [300.0, 1.0],
                    [350.0, 1.0]])
+
+puntos_amarillos_reducido = np.array([ [0.0, 1.0], 
+                                        [50.0, 0.3], 
+                                        [90.0, 0.6],  
+                                        [250.0, 1.0],])
 
 graficar_puntos_control(''' Configuración deseada ''')
 ```

@@ -1,0 +1,32 @@
+============================================= En 394, 207 (HSI usando puntos_azules) =======================================================
+(Valores imagen original)
+R = 1;   R' = 0.00392156862
+G = 251; G' = 0.98431372549
+B = 3;   B' = 0.01176470588
+
+(Al transformar)
+
+I =  0.333333...
+
+S = 1 - 0.01176470588 = 0.98823529411
+
+theta = arcos {-126/249.006} = arcos{-0,506012} = 120.39855425 (B < G)
+
+H = theta =  120.39855425 (tono prácticamente  de amplificación 1.8)
+
+(Amplificación)
+S' = 0.98823529411*~1.8 = 1.7788235294 (Se clipea a 1) = 1
+
+
+(Transformación Inversa)
+Saturación 1 en un tono >= 120 => R = 0 
+
+G = I * 2.98 = 0.99
+
+B = I(3 - 2.98) = I * 0.02 = 0.006666666...
+
+(Coincide con los valores de la imagen post saturación [R = 0.0, G = 0.992, B = 0.00794])
+
+
+
+
