@@ -131,3 +131,31 @@ graficar_puntos_control(''' Configuración deseada ''')
 ```
 
 Simplemente se la entrega a la función y se ejecuta el código. 
+
+## Pregunta 2
+
+
+## Pregunta 3
+
+En el archivo P3Reescalado.py se encuentra la función `Reescalado`, que permite reescalar una imagen RGB mediante un factor `s` (0.5 ≤ s ≤ 2), usando alguno de los dos modos de interpolación implementados: vecino más cercano (`"VMC"`) e interpolación bilineal (`"Bilineal"`).
+
+```ruby
+def Reescalado(imagenRGB: np.ndarray, s: float, interp: str):
+    ...
+
+s = 0.7
+imagen = cv2.imread("Imagenes/ArchivosT1/Bosque.jpeg")
+imagenRGB = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
+imagen_escalada = Reescalado(imagenRGB, s, "Bilineal")
+plt.imshow(imagen_escalada)
+plt.show()
+```
+
+> El parámetro `interp` debe ser `"VMC"` o `"Bilineal"`. Cualquier otro valor lanza un `ValueError`.
+
+
+Con el path correcto a la imagen deseada, simplemente se ejecuta el código.
+
+### Imágenes usadas en el informe
+
+Dentro del repositorio se encuentran la carpeta de imágenes que se usaron para el informe y sus resultados principales (imágenes reescaladas con ambos modos de interpolación, factores de escala y recortes ampliados).
